@@ -11,6 +11,9 @@ public class Test {
 	public int Id;
 	public String name;
 	
+	public String Address;
+	
+	
 	
 
 }
