@@ -2,6 +2,9 @@
  * 
  */
 package com.sample.srr;
+
+import java.sql.Date;
+
 //
 
 public class ProductDetails {
@@ -10,20 +13,20 @@ public class ProductDetails {
 	 * categoryId, inventoryId, price, discountId, createdAt, modifiedAt, 
 	 * deletedAt and generate getter, setter methods and constructor with all parameters
 	 */
-	private int Id;
+	private long Id;
 	private String Name;
 	private String Description;
 	private String SKU;
-	private int CategoryId;
-	private int InventoryId;
+	private long CategoryId;
+	private long InventoryId;
 	private double Price;
-	private int DicountId;
+	private long DicountId;
 	private String CreatedDt;
 	private String ModifiedAt;
 	private String DeletedAt;
 	
 	//Constructor below- ProductDetails 
-	public ProductDetails(int Id,  String Name, String Description, String SKU, int CategoryId, int InventoryId, double Price, int DicountId, String CreatedDt,
+	public ProductDetails(long Id,  String Name, String Description, String SKU, long CategoryId, long InventoryId, double Price, long DicountId, String CreatedDt,
 			String ModifiedAt, String DeletedAt ) {
 		this.Id = Id;
 		this.Name = Name;
@@ -40,7 +43,7 @@ public class ProductDetails {
 	}
 
 
-	public int getId() {
+	public long getId() {
 		return Id;
 	}
 
@@ -76,7 +79,7 @@ public class ProductDetails {
 
 
 
-	public int getCategoryId() {
+	public long getCategoryId() {
 		return CategoryId;
 	}
 
@@ -88,7 +91,7 @@ public class ProductDetails {
 
 
 
-	public int getInventoryId() {
+	public long getInventoryId() {
 		return InventoryId;
 	}
 
@@ -112,7 +115,7 @@ public class ProductDetails {
 
 
 
-	public int getDicountId() {
+	public long getDicountId() {
 		return DicountId;
 	}
 
@@ -177,7 +180,7 @@ public class ProductDetails {
 		ProductDetails P1 = new ProductDetails(1001, "Dell12", "Dell", "1034", 1001, 1234, 1234.34, 101,"2021-03-09", "2021-03-11", "2022-03-11");
 		System.out.println(P1);
 		
-		ProductDetails P2= new ProductDetails(1001, "HP20", "HP", "1034", 1001, 1234, 1234.34, 101,"2021-03-09", "2021-03-11", "2022-03-11");
+		ProductDetails P2= new ProductDetails(1002, "HP20", "HP", "1034", 1001, 1234, 1234.34, 101, "2021-04-09", "2021-04-11", "2022-04-11");
 		System.out.println(P2);
 		//output results are not coming for P1 and P2
 			    		
