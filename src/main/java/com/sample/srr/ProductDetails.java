@@ -12,6 +12,7 @@ public class ProductDetails {
 	/*Create a class Product with variables as id, name, desc, SKU, 
 	 * categoryId, inventoryId, price, discountId, createdAt, modifiedAt, 
 	 * deletedAt and generate getter, setter methods and constructor with all parameters
+	 * Test.....................
 	 */
 	private long Id;
 	private String Name;
