@@ -47,6 +47,14 @@ public class Day7ProductClass {
 	public void setPdescription(String pdescription) {
 		this.pdescription = pdescription;
 	}
+	
+	
+	
+
+	@Override
+	public String toString() {
+		return "Day7ProductClass [pid=" + pid + ", pname=" + pname + ", pdescription=" + pdescription + "]";
+	}
 
 	public void getAll() {
 		System.out.println("This is ProductClass");	
