@@ -3,7 +3,9 @@
  */
 package com.sample.service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +34,7 @@ public class CustomerServiceImpl implements CustomerService{
 
 	@Override
 	public List<Customer> getAllCustomers() {
+		
 		return customerRepo.findAll();
 	}
 
@@ -53,6 +56,19 @@ public class CustomerServiceImpl implements CustomerService{
 		
 		 customerRepo.deleteById(customerId);
 	}
+
+
+	@Override
+	public Customer updateUserById(Long id, Customer user) {
+		// TODO Auto-generated method stub
+		
+		
+		return customerRepo.save(user);
+	}
+
+
+	
+	
 
 }
 

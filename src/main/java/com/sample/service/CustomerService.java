@@ -4,6 +4,7 @@
 package com.sample.service;
 
 import java.util.List;
+import java.util.Set;
 
 import com.sample.model.Customer;
 
@@ -21,6 +22,10 @@ public interface CustomerService {
 	public Customer getByCustomerName(String customerName);
 
 	public void deleteCustomerById(Long customerId);
+
+	public Customer updateUserById(Long id, Customer user);
+
+	
 
 
 }

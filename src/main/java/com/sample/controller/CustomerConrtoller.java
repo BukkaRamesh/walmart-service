@@ -5,11 +5,13 @@ package com.sample.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -42,7 +44,9 @@ public class CustomerConrtoller {
 	
 	}
 	
-	//@PutMapping   update the data of existong record 
+	
+	
+	//@PutMapping   
 	//@DeleteMapping 
 	
 	@GetMapping("/{customerId}")
@@ -65,4 +69,14 @@ public class CustomerConrtoller {
 	public void deleteCustomerByID(@PathVariable Long customerId) {
 		customerService.deleteCustomerById(customerId);}
 	
+	
+	
+	@PutMapping("/update/{id}")
+	  public Customer updateUser(@PathVariable Long id, @RequestBody Customer user) {
+
+	   // customerService.updateUserById(id, user);  // finds the user with the provided id and update it
+
+	    return customerService.updateUserById(id, user);//new ResponseEntity<>("User updated.", HttpStatus.OK);
+	  }
+
 }
