@@ -35,5 +35,29 @@ public class Customer {
 	private String customerName;
 	private String customerAddress;
 	private Long customeNumber;
+	public Long getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
+	}
+	public String getCustomerName() {
+		return customerName;
+	}
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+	public String getCustomerAddress() {
+		return customerAddress;
+	}
+	public void setCustomerAddress(String customerAddress) {
+		this.customerAddress = customerAddress;
+	}
+	public Long getCustomeNumber() {
+		return customeNumber;
+	}
+	public void setCustomeNumber(Long customeNumber) {
+		this.customeNumber = customeNumber;
+	}
 
 }

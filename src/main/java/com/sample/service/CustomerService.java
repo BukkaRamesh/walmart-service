@@ -25,6 +25,10 @@ public interface CustomerService {
 
 	public Customer updateUserById(Long id, Customer user);
 
+	public List<Customer> getUniqueCustomers();
+
+	//public List<Customer> getUniqueCustomers();
+
 	
 
 

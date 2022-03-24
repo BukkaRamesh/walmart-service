@@ -44,7 +44,11 @@ public class CustomerConrtoller {
 	
 	}
 	
+	@GetMapping("/getUniqueCustomers")
+	public List<Customer> getUniqueCustomers(){
+		return customerService.getUniqueCustomers();
 	
+	}
 	
 	//@PutMapping   
 	//@DeleteMapping 
@@ -67,16 +71,15 @@ public class CustomerConrtoller {
     
 	@DeleteMapping("/delete/{customerId}")
 	public void deleteCustomerByID(@PathVariable Long customerId) {
-		customerService.deleteCustomerById(customerId);}
+		customerService.deleteCustomerById(customerId);
+		}
 	
 	
 	
 	@PutMapping("/update/{id}")
 	  public Customer updateUser(@PathVariable Long id, @RequestBody Customer user) {
 
-	   // customerService.updateUserById(id, user);  // finds the user with the provided id and update it
-
-	    return customerService.updateUserById(id, user);//new ResponseEntity<>("User updated.", HttpStatus.OK);
-	  }
+              return customerService.updateUserById(id, user);
+	    }
 
 }
