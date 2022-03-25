@@ -1,5 +1,6 @@
 package com.sample.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import javax.mail.MessagingException;
 
+import com.sample.mail.Mail;
 import com.sample.model.Customer;
 import com.sample.service.CustomerService;
+import com.sample.service.EmailService;
 
 @RestController
 @RequestMapping("walmart-service")
@@ -21,6 +25,9 @@ public class CustomerController {
 	
 	@Autowired    //you need to create CustomerService object so that you can access the CustomerService methods. 
 	CustomerService customerServ;
+	
+	@Autowired
+	EmailService emailServ;
 	
 	
 	@PostMapping("/saveCustomer")
@@ -53,5 +60,20 @@ public class CustomerController {
 	public void deleteById(@PathVariable Long customerId) {
 		customerServ.deleteCustomerById(customerId);
 	}
+	
+	@GetMapping("/sendEmail")
+	public void sendEmail() throws MessagingException, IOException{
+		Mail mail = new Mail();
+		mail.setMailFrom("meetmesubbagaun@gmail.com");
+		mail.setMailTo("meetmesubbagaun@gmail.com");
+		mail.setMailSubject("Spring Boot Example");
+		mail.setMailContent("Learning stage");
+		
+		
+		emailServ.sendEmail(mail);
+		
+		
+	}
+	
 
 }
