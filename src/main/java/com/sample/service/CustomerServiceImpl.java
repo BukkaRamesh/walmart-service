@@ -17,13 +17,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sample.model.Customer;
+import com.sample.model.Mail;
 import com.sample.repository.CustomerRepository;
+import com.sample.util.CustomerStatus;
+import com.sample.util.StatusMessage;
 
 /**
  * @author manasvibhardwaj
  *
  */
-@Service
+@Service("mailService")
 public class CustomerServiceImpl implements CustomerService{
 	
 	
@@ -45,7 +48,7 @@ public class CustomerServiceImpl implements CustomerService{
 	    if (exist=false) {
 		customerRepo.save(customer);
 		}else {
-			System.out.println("Customer already exist");
+			System.out.println("Message"+CustomerStatus.USER_EXIST+"enum"+StatusMessage.AlreadyExist);
 		}
 		
 	}
@@ -141,9 +144,15 @@ public class CustomerServiceImpl implements CustomerService{
 		return uniquecustomerobj;
 	}
 
+	
+		
+		
+		
+	}
+
 
 	
 	
 
-}
+
 

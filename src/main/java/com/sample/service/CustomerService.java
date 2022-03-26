@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 import com.sample.model.Customer;
+import com.sample.model.Mail;
 
 /**
  * @author manasvibhardwaj
@@ -27,8 +28,7 @@ public interface CustomerService {
 
 	public List<Customer> getUniqueCustomers();
 
-	//public List<Customer> getUniqueCustomers();
-
+	
 	
 
 
