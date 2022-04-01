@@ -1,0 +1,8 @@
+As there is a problem in the AssignmentFive File is that as we are starting the both thread simuntaneously 
+so both thread will have access to the method so at the time of input taking there will be a chances of input match.
+so there are chances that both thread will access to the method at the same time so data consistency issue will be
+there. 
+
+so to avoid it, we can use wait and notifyAll method which will work as second thread will finish its work and 
+when first thread finishes its work, we will call notifyAll so that second thread will awake and starts its 
+execution.
